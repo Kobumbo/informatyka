@@ -9,5 +9,4 @@ for i in range(len(lista)):
         maksimum = liczba
     elif liczba > maksimum2  or maksimum2 == maksimum:
         maksimum2 = liczba
-print(maksimum)
 print(maksimum2)
