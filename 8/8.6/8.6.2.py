@@ -4,7 +4,7 @@ b = 1
 c = 0
 print(a)
 print(b)
-for i in range(n+1):
+for i in range(n-2):
     c = a + b
     print(c)
     a = b
