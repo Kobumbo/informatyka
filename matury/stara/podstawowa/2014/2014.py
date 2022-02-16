@@ -34,4 +34,3 @@ def c():
         if suma_cyfr(lista[i][0]) == suma_cyfr(lista[i][1]):
             ile_wierszy += 1
     print(ile_wierszy)
-
