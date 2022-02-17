@@ -35,7 +35,7 @@ def c():
     lista2 = []
     for i in lista:
         if czy_pierwsza(int(i)):
-            lista2.append(int(i))
+            lista2.append(int(i))   
     for i in range(len(lista2)-1):
         if abs(lista2[i] - lista2[i+1]) == 2:
             ile_par += 1

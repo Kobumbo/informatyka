@@ -20,3 +20,6 @@ def a():
 def b():
     for i in lista2:
         print(f'{i} {lista.count(i)} {lista.count(i[::-1])}')
+
+a()
+b()
