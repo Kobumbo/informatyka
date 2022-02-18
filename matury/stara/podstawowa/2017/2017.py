@@ -5,12 +5,12 @@ lista = plik.readlines()
 for i in range(len(lista)):
     lista[i] = lista[i].split()
 
-def czy_rosnaco(lista = []):
+def czy_rosnaco(lista):
     if int(lista[0]) < int(lista[1]) < int(lista[2]):
         return True
     return False
 
-def suma_cyf_w_wierszu(lista = []):
+def suma_cyf_w_wierszu(lista):
     suma = 0
     for i in lista:
         for j in i:
@@ -44,4 +44,6 @@ def c():
             ilosc_max += 1
     print(f'Ilosc wierszy, gdzie suma = 35: {ilosc_35}')
     print(f'Najwieksza suma: {max(lista2)}, ilość: {ilosc_max}')
+
+c()
     

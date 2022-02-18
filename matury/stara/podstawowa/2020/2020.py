@@ -1,3 +1,4 @@
+import math
 plik = open("liczby.txt", "r")
 
 lista = plik.readlines()
@@ -13,7 +14,7 @@ def suma_cyfr(liczba):
 def czy_pierwsza(liczba):
     if liczba < 2:
         return False
-    for i in range(2, liczba):
+    for i in range(2, math.sqrt(liczba)+1):
         if liczba % i == 0:
             return False
     return liczba
