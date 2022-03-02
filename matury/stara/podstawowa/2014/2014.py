@@ -1,6 +1,4 @@
 from math import gcd
-
-
 import math
 plik = open("PARY_LICZB.TXT", "r")
 

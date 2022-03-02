@@ -28,7 +28,7 @@ def c():
         if i.count('0') == len(i):
             same_zera += 1
         elif i.count('1') == len(i):
-            same_jedynki += 1 
+            same_jedynki += 1   
     print(f'Zera: {same_zera}')
     print(f'Jedynki: {same_jedynki}')
 

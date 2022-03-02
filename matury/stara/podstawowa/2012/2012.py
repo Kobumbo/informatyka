@@ -36,3 +36,4 @@ def c():
             print(wyraz)
 
 
+b()
