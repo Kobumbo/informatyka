@@ -1,6 +1,3 @@
-from re import L
-
-
 plik = open('binarne.txt', 'r')
 
 lista = plik.readlines()
