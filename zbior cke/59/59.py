@@ -24,35 +24,35 @@ def moc_liczby(liczba):
         moc += 1
     return moc
 
-# def rozklad2(liczba):
-#     czynniki = []
-#     x = 2
-#     if liczba % 2 == 0:
-#         return 0
-#     while liczba >= 2:
-#         while liczba % x == 0:
-#             liczba //= x
-#             if x not in czynniki:
-#                 czynniki.append(x)
-#             if len(czynniki) > 3:
-#                 return 0
-#         x += 1
-#     return len(czynniki)
-
 def rozklad(liczba):
     czynniki = []
+    x = 2
     if liczba % 2 == 0:
         return 0
-    for i in range(3, int(math.sqrt(liczba)) + 1, 2):
-        while liczba % i == 0:
-            liczba = liczba / i
-            if i not in czynniki:
-                czynniki.append(i)
+    while liczba >= 2:
+        while liczba % x == 0:
+            liczba //= x
+            if x not in czynniki:
+                czynniki.append(x)
             if len(czynniki) > 3:
                 return 0
-    if liczba > 2:
-        czynniki.append(liczba)
+        x += 1
     return len(czynniki)
+
+# def rozklad(liczba):
+#     czynniki = []
+#     if liczba % 2 == 0:
+#         return 0
+#     for i in range(3, int(math.sqrt(liczba)) + 1, 2):
+#         while liczba % i == 0:
+#             liczba = liczba / i
+#             if i not in czynniki:
+#                 czynniki.append(i)
+#             if len(czynniki) > 3:
+#                 return 0
+#     if liczba > 2:
+#         czynniki.append(liczba)
+#     return len(czynniki)
 
 def a():
     ile = 0
@@ -85,7 +85,7 @@ def c():
     print(f'minimalna liczba o mocy 1: {min(lista_mocy_1)}')
             
 
-# a()
+a()
 # b()
 # c()
 
