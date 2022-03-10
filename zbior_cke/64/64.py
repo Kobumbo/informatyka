@@ -77,3 +77,5 @@ def c():
     print(f'{ile_niepoprawnych} - ilosc niepoprawnych')
     print(f'{max(lista_bledow)} - najwieksza liczba blednych bitow w jednym obrazku')
 
+
+b()

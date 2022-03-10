@@ -1,3 +1,5 @@
+import math
+
 plik = open('liczby.txt', 'r')
 
 def dzielniki(liczba):
@@ -22,4 +24,16 @@ def b():
         print(*dzielniki(int(i)))
         print()
 
-b()
+def c():
+    lista = [linia.strip() for linia in plik]
+    lista2 = []
+    for i in range(len(lista)):
+        warunek = True
+        for j in range(len(lista)):
+            if math.gcd(int(lista[i]), int(lista[j])) != 1 and i != j:
+                warunek = False
+        if warunek:
+            lista2.append(lista[i])
+    print(max(lista2))
+
+a()
