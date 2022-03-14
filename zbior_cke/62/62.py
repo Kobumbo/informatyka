@@ -31,5 +31,17 @@ def c():
     print(ile_takich_samych)
     print(ile_pierwszy_wiekszy_od_drugiego)
 
-c()
+def d():
+    ile_razy_w_dziesietnym = 0
+    ile_razy_w_osemkowym = 0
+    lista2_na_osemkowy = []
+    for i in lista2:
+        ile_razy_w_dziesietnym += i.count('6')
+    for i in lista2:
+        lista2_na_osemkowy.append(oct(int(i))[2:])
+    for i in lista2_na_osemkowy:
+        ile_razy_w_osemkowym += i.count('6')
+    print(ile_razy_w_osemkowym)
+    print(ile_razy_w_dziesietnym)
+
 
