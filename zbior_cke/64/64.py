@@ -56,14 +56,14 @@ def c():
     for i in wszystkie_obrazki:
         ile_niepoprawnych_wierszy = 0
         ile_niepoprawnych_kolumn = 0
-        for j in i[0:20]:
-            if bit_parzystosci(j[0:20]) != int(j[20]):
+        for j in i[:-1]:
+            if bit_parzystosci(j[:-1]) != int(j[-1]):
                 ile_niepoprawnych_wierszy += 1
         for j in range(20):
             tekst = ''
             for k in range(20):
                 tekst += i[k][j]
-            if bit_parzystosci(tekst) != int(i[20][j]):
+            if bit_parzystosci(tekst) != int(i[-1][j]):
                 ile_niepoprawnych_kolumn += 1
         lista_bledow.append(ile_niepoprawnych_kolumn + ile_niepoprawnych_wierszy)
         if ile_niepoprawnych_kolumn + ile_niepoprawnych_wierszy == 0:
@@ -77,5 +77,4 @@ def c():
     print(f'{ile_niepoprawnych} - ilosc niepoprawnych')
     print(f'{max(lista_bledow)} - najwieksza liczba blednych bitow w jednym obrazku')
 
-
-b()
+c()

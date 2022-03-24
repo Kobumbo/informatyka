@@ -5,20 +5,18 @@ def a():
     print(min(lista1))
     print(max(lista1))
 
-def b(): #!!!!!!!!!!!
-    pierwszy_wyraz = lista2[0]
-    maksymalna_dlugosc = 0
-    ile = 0
-    for i in range(len(lista2)-1):
-        if lista2[i] <= lista2[i+1]:
-            ile += 1
-            if ile > maksymalna_dlugosc:
-                maksymalna_dlugosc = ile
+def b(lista = lista2):
+    ciag = [lista[0]]
+    ciag_max = ciag
+    for i in lista[1:]:
+        if int(i) >= int(ciag[-1]):
+            ciag.append(i)
         else:
-            ile = 0
-            pierwszy_wyraz = lista2[i+1]
-    print(maksymalna_dlugosc)
-    print(pierwszy_wyraz)
+            ciag = [i]
+        if len(ciag) > len(ciag_max):
+            ciag_max = ciag
+    print(ciag_max[0])
+    print(len(ciag_max))
 
 def c():
     ile_takich_samych = 0
@@ -43,5 +41,7 @@ def d():
         ile_razy_w_osemkowym += i.count('6')
     print(ile_razy_w_osemkowym)
     print(ile_razy_w_dziesietnym)
+
+d()
 
 

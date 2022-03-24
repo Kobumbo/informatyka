@@ -36,4 +36,4 @@ def c():
             lista2.append(lista[i])
     print(max(lista2))
 
-b()
+c()

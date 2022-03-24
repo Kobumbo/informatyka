@@ -55,7 +55,7 @@ def b():
                 break
         lista_punktow.append(int(wynik_gracza))
     print(f'{max(lista_punktow)} - liczba punkow')
-    print(f'{lista_punktow.index(max(lista_punktow)) + 1} - numer gracza')
+    print(f'{lista_punktow.index(max(lista_punktow)) + 1} - numer gracza') #co jezeli wiecej graczy ma tyle samo punktow - nie wypisuje ich
 
 def dlugosc_serii(tekst):
         dlugosc = 0
@@ -82,5 +82,5 @@ def c():
 
 lista_test = [15, 53, 15]
 
-c()
+b()
 
