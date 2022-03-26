@@ -36,3 +36,5 @@ def c():
         if 4000 <= czy_pierwsza(int(i)) <= 5000:
             print(czy_pierwsza(int(i)))
             
+
+a()
