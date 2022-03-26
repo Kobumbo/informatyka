@@ -42,4 +42,4 @@ def c():
             print(*i)
     print('Max dlugosc:', max_dlugosc)
 
-
+c()

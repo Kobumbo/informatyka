@@ -20,7 +20,7 @@ def szyfrowanie(slowo, klucz):
 
 def a():
     for i in tekst[0]:
-        if i[0] == i[len(i)-1] == 'd':
+        if i[0] == i[-1] == 'd':
             print(i)
 
 def b():
