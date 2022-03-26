@@ -1,5 +1,8 @@
 import math
 
+dokad = [i.strip() for i in open('dokad.txt', 'r')]
+szyfr = [i.strip() for i in open('szyfr.txt', 'r')]
+
 def zamiana_na_liczby(slowo):
     slowo = list(slowo)
     for i in range(len(slowo)):
@@ -31,7 +34,6 @@ def szyfrowanie(slowo, klucz):
 
 
 def a():
-    dokad = [i.strip() for i in open('dokad.txt', 'r')]
     klucz = 'LUBIMYCZYTAC'
     print(szyfrowanie(*dokad, klucz))
     ile = 0
@@ -42,22 +44,20 @@ def a():
     print('Ile razy:', ile_razy)
 
 def b():
-    dokad = [i.strip() for i in open('szyfr.txt', 'r')]
-    klucz = dokad[1]
+    klucz = szyfr[1]
     klucz = list(klucz)
     for i in range(len(klucz)):
         klucz[i] = (26 - zamiana_na_liczby(klucz[i])[0]) % 26
     klucz = ''.join(zamiana_na_litery(klucz))
-    print(szyfrowanie(dokad[0], klucz))
+    print(szyfrowanie(szyfr[0], klucz))
 
 def c():
-    dokad = [i.strip() for i in open('szyfr.txt', 'r')]
     ilosc_liter = [0]*26
     n = 0
-    for i in dokad[0]:
+    for i in szyfr[0]:
         if i.isalpha():
             n += 1
-    for i in dokad[0]:
+    for i in szyfr[0]:
         if i.isalpha():
             ilosc_liter[ord(i) - 65] += 1
     for i in range(len(ilosc_liter)):
@@ -68,4 +68,5 @@ def c():
     k = suma / (n * (n - 1))
     d = 0.0285 / (k - 0.0385)
     print('Szacunkowa dlugosc:', round(d,2))
-    print('Rzeczywista dlugosc:', len(dokad[1]))
+    print('Rzeczywista dlugosc:', len(szyfr[1]))
+
