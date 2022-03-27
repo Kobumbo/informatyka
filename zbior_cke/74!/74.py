@@ -37,5 +37,3 @@ def d():
         if numer and mala and duza:
             ile += 1
     print(ile)
-
-
