@@ -69,4 +69,3 @@ def d():
                 break
         print(*ciag)
 
-
