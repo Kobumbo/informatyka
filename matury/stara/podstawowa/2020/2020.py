@@ -37,4 +37,3 @@ def c():
             print(czy_pierwsza(int(i)))
             
 
-a()

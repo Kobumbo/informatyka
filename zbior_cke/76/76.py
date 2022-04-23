@@ -20,12 +20,12 @@ def b():
 
 def c():
     klucz = szyfr3[1].split()
-    for i in range(len(szyfr3)):
-        szyfr3[i] = list(szyfr3[i])
-        for j in range(len(szyfr3[i])):
-            szyfr3[i][j], szyfr3[i][int(klucz[j % 6]) - 1] = szyfr3[i][int(klucz[j % 6]) - 1], szyfr3[i][j]
-        print(''.join(szyfr3[i]))
+    for i in range(len(klucz)):
+        klucz[i] = int(klucz[i])
+    szyfr3[0] = list(szyfr3[0])
+    for i in range(len(szyfr3[0]) - 1, -1, -1):
+        szyfr3[0][i], szyfr3[0][klucz[i % len(klucz)] - 1] = szyfr3[0][klucz[i % len(klucz)] - 1], szyfr3[0][i]
+    print(''.join(szyfr3[0]))
 
 c()
-
 

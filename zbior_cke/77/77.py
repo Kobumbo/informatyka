@@ -70,3 +70,4 @@ def c():
     print('Szacunkowa dlugosc:', round(d,2))
     print('Rzeczywista dlugosc:', len(szyfr[1]))
 
+a()

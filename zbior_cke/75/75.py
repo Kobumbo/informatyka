@@ -17,7 +17,6 @@ def szyfrowanie(slowo, klucz):
     return ''.join(lista)
 
 
-
 def a():
     for i in tekst[0]:
         if i[0] == i[-1] == 'd':
@@ -41,3 +40,5 @@ def c():
                 if szyfrowanie(p[1], klucz) == p[0]:
                     klucz_deszyfrujacy = klucz
         print('Klucz szyfrujacy', klucz_szyfrujacy, 'Klucz deszyfrujacy', klucz_deszyfrujacy)
+
+c()
